@@ -1,0 +1,776 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #456d6c;
+  font-family: 'Red Rose', cursive;
+}
+
+nav .nav-name {
+  width: 30%;
+}
+
+nav .nav-name .navbar-brand {
+  font-size: 30px;
+}
+
+nav .nav-links {
+  width: 100%;
+}
+
+nav .nav-links .navbar-nav .nav-item {
+  margin: 10px 50px;
+}
+
+nav .nav-links .navbar-nav .nav-item .nav-link {
+  display: inline-block;
+  color: #BB302D;
+  font-size: 30px;
+}
+
+nav .nav-links .navbar-nav .nav-item .nav-link:active {
+  color: #BB302D;
+  text-decoration: none;
+}
+
+nav .nav-links .navbar-nav .nav-item .nav-link:hover {
+  color: #29B5B2;
+}
+
+nav .nav-links .navbar-nav .nav-item:nth-child(3) {
+  margin: 10px 0px 10px 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav .nav-name .navbar-brand {
+    font-size: 20px;
+  }
+  nav .nav-links .navbar-nav .nav-item .nav-link {
+    color: #BB302D;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  nav .nav-links .navbar-nav .nav-item .nav-link:active {
+    color: #BB302D;
+    text-decoration: none;
+  }
+  nav .nav-links .navbar-nav .nav-item .nav-link:hover {
+    color: #29B5B2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav .nav-name {
+    width: 20%;
+  }
+  nav .nav-name .navbar-brand {
+    font-size: 25px;
+  }
+  nav .nav-links .navbar-nav .nav-item .nav-link {
+    font-size: 25px;
+  }
+}
+
+.frontpage {
+  border: 10px solid #302e2e;
+}
+
+.frontpage h1 {
+  color: #BB302D;
+  font-size: 60px;
+}
+
+.frontpage p {
+  color: #29B5B2;
+  font-size: 30px;
+}
+
+.frontpage span {
+  color: #BB302D;
+}
+
+.frontpage span a {
+  color: #BB302D;
+}
+
+.frontpage span a:hover, .frontpage span a:active {
+  color: #BB302D;
+}
+
+.frontpage .small-text {
+  font-size: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .frontpage {
+    border: 5px solid #302e2e;
+  }
+  .frontpage h1 {
+    font-size: 25px;
+  }
+  .frontpage p {
+    font-size: 15px;
+  }
+  .frontpage .small-text {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .frontpage {
+    border: 10px solid #302e2e;
+  }
+  .frontpage h1 {
+    font-size: 45px;
+  }
+  .frontpage p {
+    font-size: 20px;
+  }
+  .frontpage .small-text {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .frontpage p {
+    font-size: 24px;
+  }
+}
+
+.elem-center {
+  width: 50%;
+  height: 10%;
+  margin: 5% 25%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .elem-center {
+    width: 95%;
+    margin: 20% 2.5%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .elem-center {
+    width: 95%;
+    margin: 20% 2.5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elem-center {
+    width: 85%;
+    margin: 10% 7.5%;
+  }
+}
+
+.btn-text {
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.btn-text:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .btn-text {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .btn-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-text {
+    font-size: 25px;
+  }
+}
+
+.add-form {
+  text-align: center;
+  width: 40%;
+  padding: 1% 0%;
+  margin: 5% 30%;
+  border: 5px solid #302e2e;
+  color: #29B5B2;
+}
+
+.add-form h1 {
+  font-size: 55px;
+  color: #BB302D;
+}
+
+.add-form label {
+  font-size: 28px;
+}
+
+.add-form input, .add-form select {
+  height: 35px;
+}
+
+.add-form button {
+  margin: 15px 0px;
+  padding: 5px 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .add-form {
+    width: 90%;
+    padding: 1% 3%;
+    margin: 5% 5%;
+  }
+  .add-form h1 {
+    font-size: 30px;
+  }
+  .add-form label {
+    text-align: left;
+    width: 50%;
+    font-size: 15px;
+  }
+  .add-form input, .add-form select {
+    height: 20px;
+    width: 40%;
+  }
+  .add-form button {
+    font-size: 15px;
+    margin: 5px 10px;
+    padding: 5px 7.5px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .add-form {
+    width: 85%;
+    padding: 1% 0%;
+    margin: 15% 7.5%;
+  }
+  .add-form h1 {
+    font-size: 40px;
+  }
+  .add-form label {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+    width: 50%;
+  }
+  .add-form input, .add-form select {
+    height: 35px;
+    width: 40%;
+  }
+  .add-form button {
+    margin: 10px 0px;
+    padding: 5px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .add-form {
+    width: 85%;
+    padding: 1% 0%;
+    margin: 10% 7.5%;
+  }
+  .add-form h1 {
+    font-size: 54px;
+    color: #BB302D;
+  }
+  .add-form label {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 30px;
+    width: 40%;
+  }
+  .add-form input, .add-form select {
+    height: 30px;
+    width: 40%;
+  }
+  .add-form button {
+    margin: 10px 0px;
+    padding: 5px 50px;
+  }
+}
+
+.search-form {
+  text-align: center;
+  width: 40%;
+  padding: 1% 0%;
+  margin: 5% 30%;
+  border: 5px solid #302e2e;
+  color: #BB302D;
+}
+
+.search-form h2 {
+  font-size: 46px;
+  padding-bottom: 15px;
+  border-bottom: 5px solid #302e2e;
+}
+
+.search-form .search-input {
+  margin-top: 40px;
+}
+
+.search-form .search-input input {
+  height: 35px;
+  margin-right: 50px;
+}
+
+.search-form .search-input label {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.search-form .search-input select {
+  height: 35px;
+  margin-right: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .search-form {
+    width: 90%;
+    padding: 1% 0%;
+    margin: 5% 5%;
+  }
+  .search-form h2 {
+    font-size: 35px;
+    padding-bottom: 10px;
+  }
+  .search-form .search-input {
+    margin-top: 20px;
+  }
+  .search-form .search-input input {
+    height: 20px;
+    margin-right: 5px;
+    width: 30%;
+  }
+  .search-form .search-input label {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .search-form .search-input select {
+    height: 20px;
+    margin-right: 5px;
+  }
+  .search-form .search-input button {
+    font-size: 15px;
+    padding: 5px 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .search-form {
+    width: 85%;
+    padding: 1% 0%;
+    margin: 15% 7.5%;
+  }
+  .search-form h2 {
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #302e2e;
+  }
+  .search-form .search-input {
+    margin-top: 30px;
+  }
+  .search-form .search-input input {
+    height: 35px;
+    margin-right: 10px;
+    width: 150px;
+  }
+  .search-form .search-input label {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .search-form .search-input select {
+    height: 35px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search-form {
+    width: 85%;
+    margin: 10% 7.5%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1580px) {
+  .search-form {
+    width: 70%;
+    margin: 5% 15%;
+  }
+  .search-form input {
+    width: 250px;
+  }
+}
+
+.confirmed {
+  background: white;
+  border: 20px #28A745 solid;
+  width: 50%;
+  margin: 5% 25%;
+  text-align: center;
+}
+
+.confirmed .confirmed-message {
+  margin: 25% 10%;
+  height: 50%;
+}
+
+.confirmed .confirmed-message .message-successful {
+  color: #28A745;
+  font-size: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .confirmed {
+    border: 10px #28A745 solid;
+    width: 90%;
+    height: 50vh;
+    margin: 15% 5%;
+  }
+  .confirmed .confirmed-message .message-successful {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .confirmed .confirmed-message button {
+    width: 50%;
+    padding: 5px 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .confirmed {
+    border: 10px #28A745 solid;
+    width: 80%;
+    height: 50vh;
+    margin: 15% 10%;
+  }
+  .confirmed .confirmed-message .message-successful {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .confirmed {
+    border: 10px #28A745 solid;
+    width: 85%;
+    height: 50vh;
+    margin: 10% 7.5%;
+  }
+  .confirmed .confirmed-message {
+    margin: 14% 10%;
+  }
+  .confirmed .confirmed-message .message-successful {
+    font-size: 35px;
+  }
+}
+
+.rejection {
+  border: 20px #a02b29 solid;
+  color: #BB302D;
+  width: 50%;
+  height: 50vh;
+  margin: 5% 25%;
+  font-size: 40px;
+}
+
+.rejection button {
+  width: 40%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .rejection {
+    border: 10px #a02b29 solid;
+    width: 90%;
+    margin: 15% 5%;
+  }
+  .rejection button {
+    margin-top: 10px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .rejection {
+    border: 10px #a02b29 solid;
+    width: 80%;
+    margin: 15% 10%;
+    font-size: 35px;
+  }
+  .rejection button {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rejection {
+    border: 10px #a02b29 solid;
+    width: 85%;
+    margin: 10% 7.5%;
+    font-size: 35px;
+  }
+  .rejection button {
+    width: 20%;
+  }
+}
+
+.character-list .character-holder {
+  width: 80%;
+  margin: 5% 10%;
+  border: 5px solid #302e2e;
+}
+
+.character-list .character-holder .profile-img {
+  margin: 10px 0px;
+  width: 30%;
+}
+
+.character-list .character-holder .profile-img img {
+  height: 174px;
+  width: 345px;
+  border: 5px solid #302e2e;
+}
+
+.character-list .character-holder .profile-name {
+  width: 70%;
+}
+
+.character-list .character-holder .profile-name h2 {
+  color: #BB302D;
+  display: inline;
+  font-size: 70px;
+}
+
+.character-list .character-holder .profile-name p {
+  color: #29B5B2;
+  display: inline;
+  font-size: 70px;
+  margin-left: 20px;
+}
+
+.character-list .character-holder .profile-info {
+  width: 95%;
+}
+
+.character-list .character-holder .profile-info div p {
+  font-size: 45px;
+  color: #BB302D;
+}
+
+.character-list .character-holder .profile-info div span {
+  color: #29B5B2;
+}
+
+.character-list .character-holder .armory-button {
+  width: 50%;
+}
+
+.character-list .character-holder .controls-button {
+  width: 50%;
+}
+
+.character-list .character-holder button {
+  font-size: 30px;
+  margin: 20px 0px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .character-list .character-holder {
+    width: 90%;
+    margin: 40% 5%;
+  }
+  .character-list .character-holder .profile-img {
+    margin: 10px 0px;
+    width: 100%;
+  }
+  .character-list .character-holder .profile-img img {
+    height: 116px;
+    width: 230px;
+  }
+  .character-list .character-holder .profile-name {
+    width: 100%;
+  }
+  .character-list .character-holder .profile-name h2 {
+    text-align: center;
+    display: block;
+    font-size: 35px;
+  }
+  .character-list .character-holder .profile-name p {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  .character-list .character-holder .profile-info {
+    width: 100%;
+  }
+  .character-list .character-holder .profile-info div p {
+    font-size: 20px;
+  }
+  .character-list .character-holder .armory-button {
+    width: 50%;
+  }
+  .character-list .character-holder .armory-button .btn-text {
+    font-size: 15px;
+  }
+  .character-list .character-holder .controls-button {
+    width: 50%;
+  }
+  .character-list .character-holder button {
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .character-list .character-holder {
+    width: 90%;
+    margin: 15% 5%;
+  }
+  .character-list .character-holder .profile-img {
+    margin: 25px 0px;
+    width: 100%;
+  }
+  .character-list .character-holder .profile-img img {
+    height: 174px;
+    width: 345px;
+  }
+  .character-list .character-holder .profile-name {
+    width: 100%;
+  }
+  .character-list .character-holder .profile-name h2 {
+    display: block;
+    font-size: 45px;
+    text-align: center;
+  }
+  .character-list .character-holder .profile-name p {
+    display: block;
+    font-size: 45px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .character-list .character-holder .profile-info div p {
+    font-size: 25px;
+  }
+  .character-list .character-holder .armory-button {
+    width: 45%;
+  }
+  .character-list .character-holder .controls-button {
+    width: 50%;
+  }
+  .character-list .character-holder button {
+    font-size: 20px;
+    margin: 20px 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .character-list .character-holder {
+    width: 85%;
+    margin: 10% 7.5%;
+  }
+  .character-list .character-holder .profile-img {
+    width: 100%;
+  }
+  .character-list .character-holder .profile-name {
+    width: 100%;
+    text-align: center !important;
+  }
+  .character-list .character-holder .profile-name h2 {
+    font-size: 45px;
+  }
+  .character-list .character-holder .profile-name p {
+    font-size: 45px;
+  }
+  .character-list .character-holder .profile-info {
+    width: 90%;
+  }
+  .character-list .character-holder .profile-info div p {
+    font-size: 28px;
+  }
+  .character-list .character-holder .armory-button {
+    width: 50%;
+  }
+  .character-list .character-holder .armory-button button {
+    margin-left: 38px !important;
+  }
+  .character-list .character-holder .controls-button {
+    width: 50%;
+  }
+  .character-list .character-holder button {
+    font-size: 25px;
+    margin: 20px 0px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1580px) {
+  .character-list .character-holder .profile-img {
+    text-align: left;
+    margin: 10px 0px;
+    width: 40%;
+  }
+  .character-list .character-holder .profile-name {
+    width: 50%;
+  }
+  .character-list .character-holder .profile-name h2 {
+    display: block;
+    font-size: 60px;
+  }
+  .character-list .character-holder .profile-name p {
+    display: block;
+    font-size: 50px;
+    margin-left: 0px;
+  }
+  .character-list .character-holder .profile-info div p {
+    font-size: 33px;
+  }
+  .character-list .character-holder .armory-button {
+    width: 56%;
+  }
+  .character-list .character-holder .controls-button {
+    width: 44%;
+  }
+  .character-list .character-holder button {
+    font-size: 30px;
+    margin: 20px 0px;
+  }
+}
+
+footer nav ul li {
+  width: 3%;
+  font-size: 30px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  footer nav ul li {
+    width: 10%;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  footer nav ul li {
+    width: 8%;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer nav ul li {
+    width: 5%;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1580px) {
+  footer nav ul li {
+    width: 4%;
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,76 @@
+html(lang="en")
+    head
+        title WOWIE - searched
+        meta(http-equiv="Content-Type" content="text/html;  charset=UTF-8")
+        meta(name="robots" content="noindex,nofollow")
+        meta(name="description" content="Website made for fun that displays brief information about your character.")
+        meta(name="keywords" content="wow, lidl wow armory, wow fun, World Of Warcraft, World Of Warcraft lidl armory, wow armory like website")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
+        link(rel="stylesheet" href="/static/style/index.css")
+        script(src="/static/scripts/characters-script.js")
+    body
+        nav(class="navbar navbar-expand-lg navbar-light bg-light")
+            div(class="nav-name")
+                span(class="navbar-brand") WOWIE
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation")
+                span(class="navbar-toggler-icon")
+          
+            div(class="collapse navbar-collapse nav-links justify-content-end" id="navbarTogglerDemo02")
+                ul(class="navbar-nav")
+                    li(class="nav-item")
+                        a(class="nav-link" href="/") Home 
+                    li(class="nav-item")
+                        a(class="nav-link" href="/characters/page-1") Characters
+                        span(class="sr-only") (current)
+                    li(class="nav-item")
+                        a(class="nav-link" href="/characters/new") Add Character
+        form(class="search-form rounded shadow"  method="GET" action="/characters/search")
+            input(type="search" name="value" placeholder="Search" aria-label="search")
+            label(for='options') Filter
+            select(id="options" name="option")
+                option(value="name") Name
+                option(value="server") Server
+                option(value="region") Region
+                option(value="class") Class
+                option(value="role") Role
+            button(class="btn btn-success" type="submit") Search
+        main(class="character-list d-flex flex-column justify-content-around text-center")
+            each character in characters 
+                div(class="character-holder d-flex justify-content-around align-self-center flex-wrap round shadow bg-light")
+                    div(class="profile-img")
+                        img(src=`${character.img_half}` class="img-thumbnail rounded shadow")
+                    div(class="profile-name")
+                        h2=character.name
+                        p #{character.title == 'titleless' ? '' : character.title}
+                    div(class="profile-info row text-left")
+                        div(class="col-lg-6")
+                            p Level: <span> #{character.level} </span>
+                        div(class="col-lg-6")
+                            p Specialization: <span> #{character.spec} </span>
+                        div(class="col-lg-6")
+                            p Role: <span> #{character.role} </span>
+                        div(class="col-lg-6")
+                            p <span> #{character.race} #{character.gender} </span>
+                        div(class="col-lg-6")
+                            p Item level: <span> #{character.ilvl} </span>
+                        div(class="col-lg-6")
+                            p Region: <span> #{character.region} </span>
+                        div(class="col-lg-6")
+                            p Server: <span> #{character.server} </span>
+                        if (character.guild != "guildless")
+                            div(class="col-lg-6")
+                                p Guild: <span> #{character.guild} </span>
+                        div(class="col-lg-12 mt-4 mb-4 text-center")
+                            p Image of #{character.name}
+                            img(src=`${character.img_body}`  class="img-fluid shadow rounded" alt=`${character.name} in beautiful transmog.`)
+                    button(class="btn btn-info mb-3 ml-3 shadow rounded")
+                        a(class="btn-text" href=character.wowArmory target="_blank") WoW Armory
+                    button(class="btn btn-success mb-3 ml-3 shadow rounded" onclick=`updateHandler(${character.id})`) Update
+                    button(id=`${character.id}-delete` class="btn btn-danger mb-3 ml-3 shadow rounded" onclick=`deleteHandler(${character.id})`) Delete 
+
+
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous")

@@ -1,0 +1,865 @@
+$primary-color: #29B5B2;
+$secondary-color: #BB302D;
+$small-breakpoint: 320px;
+$small-breakpoint-end: 480px;
+$medium-breakpoint: 481px;
+$medium-breakpoint-end: 767px;
+$ipad-breakpoint: 768px;
+$ipad-breakpoint-end: 1024px;
+$lg-breakpoint: 1025px;
+$lg-breakpoint-end: 1580px;
+
+body ,html {
+    margin: 0;
+    padding: 0;
+    background-color: #456d6c;
+
+    font-family: 'Red Rose', cursive;
+}
+
+nav {
+
+    .nav-name {
+        width: 30%;
+
+        .navbar-brand {
+            font-size: 30px;
+        }
+    }
+    .nav-links{
+        width: 100%;
+
+        .navbar-nav{
+            .nav-item {
+                margin: 10px 50px;
+                .nav-link {
+                    display: inline-block;
+                    color: $secondary-color;
+                    font-size: 30px;
+                
+                    &:active {
+                        color: $secondary-color;
+                        text-decoration: none;
+                    }
+                
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                &:nth-child(3){
+                    margin: 10px 0px 10px 50px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        .nav-name {
+            .navbar-brand {
+                font-size: 20px;
+            }
+        }
+        .nav-links{
+            .navbar-nav{
+                .nav-item {
+                    .nav-link {
+                        color: $secondary-color;
+                        font-size: 20px;
+                        margin: 0;
+                        padding: 0;
+                        &:active {
+                            color: $secondary-color;
+                            text-decoration: none;
+                        }
+                    
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        .nav-name {
+            width: 20%;
+    
+            .navbar-brand {
+                font-size: 25px;
+            }
+        }
+        .nav-links{
+            .navbar-nav{
+                .nav-item {
+                    .nav-link {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.frontpage{
+    border: 10px solid #302e2e;
+    h1 {
+        color: $secondary-color;
+        font-size: 60px;
+    }
+
+    p {
+        color: $primary-color;
+        font-size: 30px;
+    }
+
+    span {
+        color: $secondary-color;
+
+        a {            
+            color: $secondary-color;
+            &:hover, &:active {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .small-text {
+        font-size: 15px;
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        border: 5px solid #302e2e;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .small-text{
+            font-size: 10px; 
+        }
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        border: 10px solid #302e2e;
+        h1 {
+            font-size: 45px;
+        }
+    
+        p {
+            font-size: 20px;
+        }
+        .small-text {
+            font-size: 13px;
+        }
+    }
+
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        p {
+            font-size: 24px;
+        }
+
+    }
+}
+
+.elem-center {
+    width: 50%;
+    height: 10%;
+    margin: 5% 25%;
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        width: 95%;
+        margin: 20% 2.5%;
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        width: 95%;
+        margin: 20% 2.5%;
+    }
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        width: 85%;
+        margin: 10% 7.5%;
+    }
+}
+
+.btn-text {
+    color: #FFFFFF;
+    font-size: 30px;
+
+    &:hover {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        font-size:  15px;
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        font-size: 25px;
+    }
+}
+
+.add-form {
+    text-align: center;
+    width: 40%;
+    padding: 1% 0%;
+    margin: 5% 30%;
+    border: 5px solid #302e2e;
+    color: $primary-color;
+
+    h1 {
+        font-size: 55px;
+        color: $secondary-color;
+    }
+
+    label {
+        font-size: 28px;
+    }
+
+    input, select {
+        height: 35px;
+    }
+    button {
+        margin: 15px 0px;
+        padding: 5px 50px;
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        width: 90%;
+        padding: 1% 3%;
+        margin: 5% 5%;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        label {
+            text-align: left;
+            width: 50%;
+            font-size: 15px;
+        }
+
+        input, select {
+            height: 20px;
+            width: 40%;
+        }
+
+        button {
+            font-size: 15px;
+            margin: 5px 10px;
+            padding: 5px 7.5px;
+            width: 100%;
+        }
+        
+    }
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        width: 85%;
+        padding: 1% 0%;
+        margin: 15% 7.5%;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        label {
+            text-align: left;
+            font-size: 20px;
+            margin-left: 10px;
+            width: 50%;
+        }
+
+        input, select {
+            height: 35px;
+            width: 40%;
+        }
+        button {
+            margin: 10px 0px;
+            padding: 5px 20px;
+        }
+    }
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        width: 85%;
+        padding: 1% 0%;
+        margin: 10% 7.5%;
+        h1 {
+            font-size: 54px;
+            color: $secondary-color;
+        }
+
+        label {
+            text-align: left;
+            font-size: 25px;
+            margin-left: 30px;
+            width: 40%;
+        }
+
+        input, select {
+            height: 30px;
+            width: 40%;
+        }
+        button {
+            margin: 10px 0px;
+            padding: 5px 50px;
+        }
+    }
+}
+
+.search-form {
+    text-align: center;
+    width: 40%;
+    padding: 1% 0%;
+    margin: 5% 30%;
+    border: 5px solid #302e2e;
+    color: $secondary-color;
+
+    h2 {
+        font-size: 46px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid #302e2e;
+    }
+
+    .search-input {
+        margin-top: 40px;
+
+        input {
+            height: 35px;
+            margin-right: 50px;
+        }
+    
+        label {
+            font-size: 20px;
+            margin-right: 40px;
+        }
+    
+        select {
+            height: 35px;
+            margin-right: 50px;
+        } 
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        width: 90%;
+        padding: 1% 0%;
+        margin: 5% 5%;
+
+        h2 {
+            font-size: 35px;
+            padding-bottom: 10px;
+        }
+        .search-input {
+            margin-top: 20px;
+            input {
+                height: 20px;
+                margin-right: 5px;
+                width: 30%;
+            }
+
+            label {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+
+            select {
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            button {
+                font-size: 15px;
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        width: 85%;
+        padding: 1% 0%;
+        margin: 15% 7.5%;
+
+        h2 {
+            font-size: 40px;
+            padding-bottom: 10px;
+            border-bottom: 5px solid #302e2e;
+        }
+
+        .search-input {
+            margin-top: 30px;
+
+            input {
+                height: 35px;
+                margin-right: 10px;
+                width: 150px;
+            }
+        
+            label {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        
+            select {
+                height: 35px;
+                margin-right: 10px;
+            } 
+        }
+    }
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        width: 85%;
+        margin: 10% 7.5%;
+    }
+
+    @media (min-width: $lg-breakpoint) and (max-width: $lg-breakpoint-end) {
+        width: 70%;
+        margin: 5% 15%;
+
+        input {
+            width: 250px;
+        }
+    }
+}
+
+
+.confirmed {
+    background: white;
+    border:20px #28A745 solid;
+    width: 50%; 
+    margin: 5% 25%;
+    text-align: center;
+
+    .confirmed-message {
+        margin: 25% 10%;
+        height: 50%;
+        
+        .message-successful {
+            color: #28A745;
+            font-size: 40px;
+        }
+    }
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end){
+        border: 10px #28A745 solid;
+        width: 90%;
+        height: 50vh;
+        margin: 15% 5%;
+
+        .confirmed-message {
+
+            .message-successful {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                width: 50%;
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        border: 10px #28A745 solid;
+        width: 80%;
+        height: 50vh;
+        margin: 15% 10%;
+    
+        .confirmed-message {
+            
+            .message-successful {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        border:10px #28A745 solid;
+        width: 85%;
+        height: 50vh;
+        margin: 10% 7.5%;
+    
+        .confirmed-message {
+            margin: 14% 10%;
+            
+            .message-successful {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+
+.rejection {
+    border:20px #a02b29 solid;
+    color: $secondary-color;
+    width: 50%;
+    height: 50vh;
+    margin: 5% 25%;
+    font-size: 40px;
+
+    button {
+        width: 40%;
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end){
+        border: 10px #a02b29 solid;
+        width: 90%;
+        margin: 15% 5%;
+
+        button {
+            margin-top: 10px;
+            width: 50%;
+        }
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        border:10px #a02b29 solid;
+        width: 80%;
+        margin: 15% 10%;
+        font-size: 35px;
+
+        button {
+            width: 30%;
+        }
+    }
+
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        border:10px #a02b29 solid;
+        width: 85%;
+        margin: 10% 7.5%;
+        font-size: 35px;
+    
+        button {
+            width: 20%;
+        }
+    }
+    
+}
+
+.character-list {
+
+    .character-holder {
+        width: 80%;
+        margin: 5% 10%;
+        border: 5px solid #302e2e;
+    
+        .profile-img {
+            margin: 10px 0px;
+            width: 30%;
+
+            img {
+                height: 174px;
+                width: 345px;
+                border: 5px solid #302e2e;
+            }
+        }
+
+        .profile-name {
+            width: 70%;
+
+            h2 {
+                color: $secondary-color;
+                display: inline;
+                font-size: 70px;
+            }
+            p {
+                color: $primary-color;
+                display: inline;
+                font-size: 70px;
+                margin-left: 20px;
+            }
+        }
+
+        .profile-info {
+            width: 95%;
+            div {
+
+                p {
+                    font-size: 45px;
+                    color: $secondary-color;
+                }
+
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .armory-button {
+            width: 50%
+        }
+
+        .controls-button {
+            width: 50%
+        }
+
+        button {
+            font-size: 30px;
+            margin: 20px 0px;
+        }
+    }
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        .character-holder {
+            width: 90%;
+            margin: 40% 5%;
+
+            .profile-img {
+                margin: 10px 0px;
+                width: 100%;
+    
+                img {
+                    height: 116px;
+                    width: 230px;
+                }
+            }
+
+            .profile-name {
+                width: 100%;
+    
+                h2 {
+                    text-align: center;
+                    display: block;
+                    font-size: 35px;
+                }
+                p {
+                    display: block;
+                    text-align: center;
+                    font-size: 35px;
+                    margin-left: 0px;
+                }
+            }
+
+            .profile-info {
+                width: 100%;
+                div {
+    
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .armory-button {
+                width: 50%;
+                
+                .btn-text {
+                    font-size: 15px;
+                }
+            }
+    
+            .controls-button {
+                width: 50%
+            }
+    
+            button {
+                font-size: 15px;
+                margin: 10px 0px;
+            }
+        }
+    }
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        .character-holder {
+            width: 90%;
+            margin: 15% 5%;
+        
+            .profile-img {
+                margin: 25px 0px;
+                width: 100%;
+    
+                img {
+                    height: 174px;
+                    width: 345px;
+                }
+            }
+    
+            .profile-name {
+                width: 100%;
+    
+                h2 {
+                    display: block;
+                    font-size: 45px;
+                    text-align: center;
+                }
+                p {
+                    display: block;
+                    font-size: 45px;
+                    text-align: center;
+                    margin-left: 0px;
+                }
+            }
+    
+            .profile-info {
+                div {
+                    p {
+                        font-size: 25px;
+                    }
+                }
+            }
+    
+            .armory-button {
+                width: 45%
+            }
+    
+            .controls-button {
+                width: 50%
+            }
+    
+            button {
+                font-size: 20px;
+                margin: 20px 0px;
+            }
+        }
+    }
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        .character-holder {
+            width: 85%;
+            margin: 10% 7.5%;
+        
+            .profile-img {
+                width: 100%;
+            }
+    
+            .profile-name {
+                width: 100%;
+                text-align: center !important;
+                h2 {
+                    font-size: 45px;
+                }
+                p {
+                    font-size: 45px;
+                }
+            }
+    
+            .profile-info {
+                width: 90%;
+                div {
+    
+                    p {
+                        font-size: 28px;
+                    }
+                }
+            }
+    
+            .armory-button {
+                width: 50%;
+                button {
+                    margin-left: 38px !important;
+                }
+            }
+    
+            .controls-button {
+                width: 50%
+            }
+
+            button {
+                font-size: 25px;
+                margin: 20px 0px;
+            }
+        }
+    }
+
+    @media (min-width: $lg-breakpoint) and (max-width: $lg-breakpoint-end){
+        .character-holder {
+        
+            .profile-img {
+                text-align: left;
+                margin: 10px 0px;
+                width: 40%;
+            }
+    
+            .profile-name {
+                width: 50%;
+    
+                h2 {
+                    display: block;
+                    font-size: 60px;
+                }
+                p {
+                    display: block;
+                    font-size: 50px;
+                    margin-left: 0px;
+                }
+            }
+    
+            .profile-info {
+                div {
+                    p {
+                        font-size: 33px;
+                    }
+                }
+            }
+    
+            .armory-button {
+                width: 56%
+            }
+    
+            .controls-button {
+                width: 44%
+            }
+    
+            button {
+                font-size: 30px;
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+
+footer {
+    nav {
+        ul {
+            li {
+                width: 3%;
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media (min-width: $small-breakpoint) and (max-width: $small-breakpoint-end) {
+        nav {
+            ul {
+                li {
+                    width: 10%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    @media (min-width: $medium-breakpoint) and (max-width: $medium-breakpoint-end) {
+        nav {
+            ul {
+                li {
+                    width: 8%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    @media (min-width: $ipad-breakpoint) and (max-width: $ipad-breakpoint-end) {
+        nav {
+            ul {
+                li {
+                    width: 5%;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $lg-breakpoint) and (max-width: $lg-breakpoint-end) {
+        nav {
+            ul {
+                li {
+                    width: 4%;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
