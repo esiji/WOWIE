@@ -41,5 +41,4 @@ passport.deserializeUser(function(user, done) {
 });
 
 // Listen to PORT
-console.log(__dirname)
 app.listen(PORT)

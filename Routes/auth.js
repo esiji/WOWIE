@@ -27,7 +27,6 @@ const getNewAccessToken = async (token)  => {
         helper: 'help'
     })
     const savedToken = await newToken.save()
-    console.log(savedToken)
 }
 
 

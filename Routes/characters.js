@@ -130,38 +130,42 @@ router.post('/new/add', async (req, res) => {
 })
 
 router.put('/:id', async (req, res) => {
-    const updatingCharacter  = await Character.findOne({
-        id: req.params.id
-    })
-    const name = updatingCharacter.name.toLowerCase()
-    const region = updatingCharacter.region === "Europe" ? 'eu' : 'na'
-    const server = changeServerName(updatingCharacter.server)
-    const isTokenValid = await checkIfAccessTokenIsValid()
-    if(!isTokenValid) {
-        res.render(path.join(process.cwd(), '/views/character-rejection.pug'), {error: 'Token expired! Get a new access token!', token: true})
-    }else {
-        let token = await Token.find()
-        token = token[0].token
-
-        let characterInfo = await fetch(`https://eu.api.blizzard.com/profile/wow/character/${server}/${name}?namespace=profile-${region}&locale=en_US&access_token=${token}`)
-        characterInfo = await characterInfo.json()
-        let characterMedia = await fetch(`https://eu.api.blizzard.com/profile/wow/character/${server}/${name}/character-media?namespace=profile-${region}&locale=en_US&access_token=${token}`)
-        characterMedia = await characterMedia.json()
-        await Character.updateOne({id: req.params.id}, {
-            title: characterInfo.active_title ? characterInfo.active_title.name : 'titleless',
-            gender: characterInfo.gender.name,
-            faction: characterInfo.faction.name,
-            race: characterInfo.race.name,
-            spec: characterInfo.active_spec.name,
-            role: checkRole(characterInfo.active_spec.name),
-            guild: characterInfo.guild ? characterInfo.guild.name : 'guildless',
-            level: characterInfo.level,
-            ilvl: characterInfo.equipped_item_level,
-            img_avatar: characterMedia.avatar_url,
-            img_half: characterMedia.bust_url,
-            img_body: characterMedia.render_url
+    try{
+        const updatingCharacter  = await Character.findOne({
+            id: req.params.id
         })
-        res.redirect(303, `/characters/page-1`)
+        const name = updatingCharacter.name.toLowerCase()
+        const region = updatingCharacter.region === "Europe" ? 'eu' : 'na'
+        const server = changeServerName(updatingCharacter.server)
+        const isTokenValid = await checkIfAccessTokenIsValid()
+        if(!isTokenValid) {
+            res.render(path.join(process.cwd(), '/views/character-rejection.pug'), {error: 'Token expired! Get a new access token!', token: true})
+        }else {
+            let token = await Token.find()
+            token = token[0].token
+    
+            let characterInfo = await fetch(`https://eu.api.blizzard.com/profile/wow/character/${server}/${name}?namespace=profile-${region}&locale=en_US&access_token=${token}`)
+            characterInfo = await characterInfo.json()
+            let characterMedia = await fetch(`https://eu.api.blizzard.com/profile/wow/character/${server}/${name}/character-media?namespace=profile-${region}&locale=en_US&access_token=${token}`)
+            characterMedia = await characterMedia.json()
+            await Character.updateOne({id: req.params.id}, {
+                title: characterInfo.active_title ? characterInfo.active_title.name : 'titleless',
+                gender: characterInfo.gender.name,
+                faction: characterInfo.faction.name,
+                race: characterInfo.race.name,
+                spec: characterInfo.active_spec.name,
+                role: checkRole(characterInfo.active_spec.name),
+                guild: characterInfo.guild ? characterInfo.guild.name : 'guildless',
+                level: characterInfo.level,
+                ilvl: characterInfo.equipped_item_level,
+                img_avatar: characterMedia.avatar_url,
+                img_half: characterMedia.bust_url,
+                img_body: characterMedia.render_url
+            })
+            res.redirect(303, `/characters/page-1`)
+        }
+    }catch(err){
+        res.render(path.join(process.cwd(), '/views/character-rejection.pug'), {error: 'Token expired! Get a new access token!', token: true})
     }
 })
 
